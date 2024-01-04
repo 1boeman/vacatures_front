@@ -1,0 +1,130 @@
+:root {
+  --primary: #039be5;
+}
+.timebar_controls {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    cursor:pointer;
+}
+
+ul.timebar_controls li{
+    list-style:none;
+}
+.timebar_controls li.timer_start{
+    display:none;
+
+}
+.timerStopped .timebar_controls li.timer_stop{
+    display:none;
+}
+.timerStopped .timebar_controls li.timer_start{
+    display:block
+}
+
+.nowrap{white-space:nowrap}
+.right{float:right}
+h1.page_title{
+    margin-bottom:1rem;
+}
+hgroup{
+    padding:0.1rem 1rem;
+    background:#003366;
+    border-top-left-radius:0.2rem;
+    border-top-right-radius:0.2rem;
+    margin-bottom:0rem;
+}
+hgroup h4{
+    color:black;
+}
+.news_block{
+    margin-bottom:1rem;
+    border-bottom-left-radius:0.2rem;
+    border-bottom-right-radius:0.2rem;
+    overflow:hidden;
+}
+.news {
+    border-top:1px solid #333;
+    padding:0.2rem 0rem;
+
+}
+.hidden {display:none;}
+.open .hidden {display:block}
+
+.article_title, .article_body {
+    padding:0.1rem 1rem;
+}
+.article_title {
+    cursor:pointer
+}
+.show_description{
+    padding:0.1rem 1rem;
+    font-size:0.8rem;
+}
+.article_body{
+    margin-top:0.2rem;
+    background:#000; 
+}
+.expandable{display:none}
+.expand_button{list-style:none}
+.news_block{
+    background:#111;
+ }
+
+
+#scrollToTopBtn {
+  display:block;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  opacity:0;
+  z-index:100;
+  position: fixed;
+  bottom: 30px;
+  right: 30px; 
+  transform: translateY(100px);
+  transition: all .5s ease;
+  padding:1rem;
+  border:2px solid #333;
+  text-decoration:none;
+}
+#scrollToTopBtn.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+#menu-small{display:none}
+.hamburger {display:none}
+@media (max-width: 768px) {
+    #menu-small li a{
+        background:#333;
+    }
+    #menu-small li{
+        margin-bottom:0.5rem;
+    }
+    .hamburger{
+        display:flex;
+    } 
+    .menu{
+        display:none;
+    }
+    #menu-small.show{
+        display:block;
+    }
+}
+
+@keyframes example {
+  from {width: 100%; background-color: blue;}
+  to {width:0%; background:AliceBlue}
+}
+
+
+body{
+    transition: opacity 1s ease-in-out;
+}
+body.faded{
+    opacity:0;
+}

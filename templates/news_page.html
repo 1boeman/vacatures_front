@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title%}{{data.page_title}}{% endblock %}
+
+{% block content -%}
+<main>
+    <div>Updated @ {{local_now.strftime('%H:%M:%S - %d/%m/%Y')}} </div>
+    <div class="grid">
+{% for section in data.sections %}
+        {% if section|length > 0 %}
+        <section>
+          {% for source in section %}
+            {% if 'data' in source %}
+               {% include 'news_block.html' %}
+            {% endif %}
+        {% endfor%}
+        </section>
+        {%endif%}
+{% endfor %}
+    </div>
+</main>
+<a id="scrollToTopBtn" id="scrollToTopBtn"> <i data-feather="chevrons-up"></i> </a>
+{% endblock %}

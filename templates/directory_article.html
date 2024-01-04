@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title%}{{data.title}}{% endblock %}
+
+{% block content -%}
+<main>
+    <h1 class="page_title">{{data.title}}</h1>
+    <time class="right">{{data.date}}</time>
+    {{data.main |safe}}
+</main>
+{% endblock %}

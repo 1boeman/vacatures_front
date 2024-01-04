@@ -1,0 +1,35 @@
+        <div class="news_block" id="{{ source.data.identifier }}">
+                <hgroup>
+                    <h5><strong><a href="{{source.url}}">{{source.title}}</a></strong>
+                    </h5>
+                    <small class="nowrap"><em>{{source.data['entries'][0].pubDate}}</em></small>
+                </hgroup>
+                {% set count = namespace(value=0) %}
+                {%for item in source.data['entries'] -%}
+                    {% set count.value = count.value + 1 %}
+                    <div class="news {% if count.value > 5 %}expandable{% endif %}">
+                        <div class="article_title"><a href="{{item.link}}">{{item.title}}</a>
+                        </div>
+                        {% if source['db_source']['process'] %}
+                            {% if 'show_description' in source['db_source']['process']  %}
+                                <div class="show_description">
+                               {{item.description|striptags}}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        <div class="article_body hidden">
+                            <ul>
+                                <li><small><em><a class="external" target="_blank" href="{{item.link}}">{{source.data.link[:30] if source.data.link else 'Source'}} &raquo;</a></em></small></li>
+                            </ul>
+                            <p>{{item.description|striptags}}
+                                <br><small><em><a class="external" target="_blank" href="{{item.link}}">{{item.link}}</a></em></small>
+                            </p>
+                        </div>
+                    </div>
+                    {% if count.value == 6 %}
+                    <div class="expand_button">
+                            <button class="outline">meer <i data-feather="chevrons-down"></i></button>
+                    </div>
+                    {% endif %}
+                {% endfor%}
+            </div>

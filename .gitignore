@@ -1,0 +1,7 @@
+__pycache__
+config.yml
+node_modules
+package-lock.json
+venv
+tmp
+output

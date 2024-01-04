@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1800">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/www_assets/css/pico.min.css">
+    <link rel="stylesheet" href="/www_assets/css/main.css?v=1.3">
+</head>
+<body>
+<ul class="timebar_controls">
+    <li class="timer_stop"><i data-feather="x-square"></i> stop timer</li>
+    <li class="timer_start"><i data-feather="clock"></i> start timer</li>
+</ul>
+<div class="container-fluid">
+    <header>
+       <nav>
+            <ul class="menu">
+                {% for key,value in data.menu.items() %}
+                <li><a href="/{{key}}">{{value}}</a></li>
+                {% endfor %}
+            </ul>
+            <ul class="hamburger">
+               <li><a href="#" id="hamburger"><i data-feather="menu"></i></a></li> 
+            </ul>
+        </nav>
+    </header>
+    <aside id="menu-small">
+        <nav>
+            <ul>
+            {% for key,value in data.menu.items() %}
+                <li><a href="/{{key}}">{{value}}</a></li>
+            {% endfor %}
+            </ul>
+        </nav>
+    </aside>
+
+    {% block content%}{% endblock %}
+
+</div>
+<script src="/www_assets/js/main.js?v=2"></script>
+</body>
+</html>

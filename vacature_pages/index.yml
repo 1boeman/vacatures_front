@@ -1,0 +1,26 @@
+title: Onderwijs
+type: news
+content:
+  -
+    - title: Universiteit van Amsterdam
+      url: https://www.uva.nl/over-de-uva/werken-bij-de-uva/werken-bij-de-uva.html
+      src: https://vacatures.uva.nl/UvA/search/?createNewAlert=false&q=&optionsFacetsDD_department=&optionsFacetsDD_shifttype=Ondersteunend+Beheer+Personeel&optionsFacetsDD_facility=
+      type: html
+      process: data_map:uva
+
+    - title: HvA / AUAS
+      url: https://vacaturesuvahva.nl/HvA/search?locale=nl_NL
+      src: https://vacaturesuvahva.nl/HvA/search/?createNewAlert=false&q=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=Onderwijs+Ondersteunend+Personeel&optionsFacetsDD_dept=
+      type: html
+      process: data_map:hva
+  -
+    - title: Surf
+      url: https://werkenbij.surf.nl/vacatures/
+      src: https://werkenbij.surf.nl/vacatures/
+      type: html
+  -
+    - title: AcademicTransfer.com
+      url: https://www.academictransfer.com/
+      src: https://www.academictransfer.com/nl/jobs/?vacancy_type=non_scientific&q=&order=
+      type: html
+      process: data_map:academictransfer
