@@ -1,0 +1,40 @@
+title: Overig
+type: news
+content:
+  -
+    - title: Culturele vacatures
+      url: https://www.culturele-vacatures.nl
+      src: https://www.culturele-vacatures.nl/?s=Amsterdam&post_type=post
+      type: html
+      process: data_map:culturele_vacatures
+
+    - title: werkenvoornederland.nl
+      url: https://www.werkenvoornederland.nl/vacatures
+      src: https://www.werkenvoornederland.nl/vacatures?term=Amsterdam
+      type: selenium
+      process: data_map:werkenvoornederland
+
+  -
+    - title: tweakers.nl
+      url: https://tweakers.net/carriere/it-banen/zoeken
+      src: https://tweakers.net/carriere/it-banen/zoeken/#filter:q1bKyU9OLMnMz1OyUkrMLS5JLUpJzFWqBQA
+      type: html
+      process: data_map:tweakers
+
+    - title: oneworld.nl
+      url: https://www.oneworld.nl
+      src:  https://www.oneworld.nl/vacaturebank-2022/oneworld-vacaturebank/?show_results=1&query=&job_city=
+      type: html
+
+  -
+    - title: vacatures.knaw.nl
+      url: https://vacatures.knaw.nl
+      src: https://vacatures.knaw.nl/go/Alle-vacatures/8934155/
+      type: html
+
+    - title: fondsen.org
+      url: https://www.fondsen.org/p/home 
+      src: https://www.fondsen.org/p/home 
+      type: selenium
+
+

@@ -18,6 +18,13 @@ content:
       url: https://werkenbij.surf.nl/vacatures/
       src: https://werkenbij.surf.nl/vacatures/
       type: html
+
+    - title: Werkenbijhogescholen.nl
+      url: https://www.werkenbijhogescholen.nl
+      src: https://www.werkenbijhogescholen.nl/vacatures/?location=Amsterdam&location_range=10
+      type: html
+      process: data_map:werkenbijhogescholen
+
   -
     - title: AcademicTransfer.com
       url: https://www.academictransfer.com/

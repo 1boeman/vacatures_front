@@ -4,10 +4,10 @@
                     </h5>
                     <small class="nowrap"><em>{{source.data['entries'][0].pubDate}}</em></small>
                 </hgroup>
-                {% set count = namespace(value=0) %}
+                {% set count = namespace(value=0, maxcount=10) %}
                 {%for item in source.data['entries'] -%}
                     {% set count.value = count.value + 1 %}
-                    <div class="news {% if count.value > 5 %}expandable{% endif %}">
+                    <div class="news {% if count.value >= count.maxcount %}expandable{% endif %}">
                         <div class="article_title"><a href="{{item.link}}">{{item.title}}</a>
                         </div>
                         {% if source['db_source']['process'] %}
@@ -26,7 +26,7 @@
                             </p>
                         </div>
                     </div>
-                    {% if count.value == 6 %}
+                    {% if count.value == count.maxcount %}
                     <div class="expand_button">
                             <button class="outline">meer <i data-feather="chevrons-down"></i></button>
                     </div>
