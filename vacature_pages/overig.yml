@@ -13,6 +13,15 @@ content:
       src: https://www.werkenvoornederland.nl/vacatures?term=Amsterdam
       type: selenium
       process: data_map:werkenvoornederland
+  -
+    - title: Greenpeace
+      url:  https://www.greenpeace.org
+      src: https://www.greenpeace.org/nl/over-ons/vacatures/
+      type: selenium
+    - title: Waag
+      url: https://waag.org/nl/vacatures/
+      src: https://waag.homerun.co/
+      type: selenium
 
   -
     - title: tweakers.nl
