@@ -2,7 +2,9 @@
                 <hgroup>
                     <h5><strong><a href="{{source.url}}">{{source.title}}</a></strong>
                     </h5>
+                    {% if source.data['entries'] | length > 0 %}
                     <small class="nowrap"><em>{{source.data['entries'][0].pubDate}}</em></small>
+                    {% endif %}
                 </hgroup>
                 {% set count = namespace(value=0, maxcount=10) %}
                 {%for item in source.data['entries'] -%}
